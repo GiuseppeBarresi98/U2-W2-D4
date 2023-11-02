@@ -1,0 +1,93 @@
+@import "./partials/reset";
+@import "./partials/animation";
+@import "./partials/colors";
+@import "./partials/spacing";
+@import "./partials/mixing";
+@import "./partials/variables";
+@import "./partials/font";
+@import "./partials/buttons";
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid $color-border;
+  background-color: $color-background-nav;
+  img {
+    width: 300px;
+    border-radius: 50%;
+  }
+  ul {
+    li {
+      display: inline-block;
+      padding-inline: 50px;
+      color: white;
+      font: {
+        size: $fontsize-header;
+        family: $font-family;
+        font-weight: bold;
+      }
+    }
+  }
+  button {
+    @include button-styles(Yellowgreen, white);
+  }
+}
+
+main {
+  width: 90%;
+  padding: 50px;
+  background-color: $bg-hero;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  border-bottom: 1px solid grey;
+  div h1 {
+    @include title();
+    margin-top: 50px;
+
+    font: {
+      family: $font-family;
+      size: $fontsize-title;
+      size: bolder;
+    }
+  }
+  div img {
+    border: 1px solid grey;
+    @include floating();
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+.first-button {
+  @include button-styles($button-first-color, white);
+  margin: 20px;
+}
+
+.third-button {
+  @include button-styles($button-third-color, white);
+  margin: 20px;
+}
+.second-button {
+  @include button-styles(#ff8700, white);
+  margin: 20px;
+}
+
+section {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  div img {
+    @include flex-grid();
+    width: 80%;
+    @include floating();
+  }
+}
+
+.div-animation {
+  animation: fadeIn 1s ease forwards;
+}

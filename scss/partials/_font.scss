@@ -1,0 +1,13 @@
+$fontsize-header: 3rem;
+$fontsize-sm: 1rem;
+$fontsize-element: 1.5rem;
+$fontsize-title: 5rem;
+
+$font-family: arial;
+
+@mixin title {
+  font-size: $fontsize-title;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}

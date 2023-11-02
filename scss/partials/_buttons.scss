@@ -1,0 +1,14 @@
+@mixin button-styles($bg-color, $text-color) {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;
+  height: 70px;
+
+  font-weight: bold;
+  cursor: pointer;
+}
